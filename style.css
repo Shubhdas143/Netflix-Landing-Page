@@ -1,0 +1,262 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.main {
+    background-image: url("Asset/netflixBG.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* background-size: max(1000px, 100vw); */
+    height: 100vh;
+    position: relative;
+}
+
+.main .box {
+    height: 100vh;
+    width: 100%;
+    opacity: 0.7;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+
+nav {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80vw;
+    margin: auto;
+    height: 100px;
+}
+
+nav .flex {
+    display: flex;
+    gap: 12px; /* space between buttons */
+}
+nav img {
+    margin-top: 30px;
+    width: 200px;
+    height: 120px;
+    position: relative;
+    z-index: 10;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    font-family: "Martel Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    gap: 23px;
+    height: calc(100vh - 100px);
+    
+    /* padding: px; */
+}
+
+.hero>:first-child {
+    
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+}
+
+.hero>:nth-child(2) {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+}
+
+.hero>:nth-child(3) {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+}
+
+.btn {
+    padding: 8px 16px; /* bigger padding */
+    font-weight: 400;
+    font-size: 16px; /* bigger text */
+    color: white;
+    background-color: rgba(248, 243, 243, 0.021);
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn:hover{
+    background-color: rgb(73, 72, 72);
+}
+.btn-red {
+    background-color: red;
+    color: white;
+       padding: 14px 36px; /* taller + wider */
+    font-size: 22px; /* bigger font */
+    border-radius: 8px;
+    font-weight: 700 ;
+    font-family: sans-serif;
+    transition: .5s;
+}
+
+.btn-red:hover{
+    background-color: rgb(174, 6, 6);
+    cursor: pointer;
+}
+
+.red-sm {
+    background-color: red;
+    color: white;
+       padding: 8px 20px; /* match height with English button */
+       transition: .5s;
+}
+
+.red-sm:hover{
+    background-color: rgb(174, 6, 6);
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.main input {
+    padding: 14px 180px 14px 16px; /* taller + wider */
+    font-size: 18px; /* bigger text */
+    color: white;
+    
+    font-weight: 400;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(220, 216, 216, 0.5);
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+/* Tablets & large phones */
+@media (max-width: 768px) {
+    nav {
+        max-width: 95vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 12px;
+    }
+
+    nav img {
+        width: 100px;
+        height: auto;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .hero {
+        gap: 16px;
+        height: auto;
+        padding: 40px 12px;
+        text-align: center;
+    }
+
+    .hero>:first-child {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .hero>:nth-child(2) {
+        font-size: 16px;
+    }
+
+    .hero>:nth-child(3) {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 10px;
+    }
+
+    .main input {
+        width: 100%;
+        padding: 10px 14px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .btn-red {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px 0;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    nav img {
+        width: 90px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .hero>:first-child {
+        font-size: 22px;
+    }
+
+    .hero>:nth-child(2) {
+        font-size: 14px;
+    }
+
+    .hero>:nth-child(3) {
+        font-size: 12px;
+    }
+
+    .main input {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .btn-red {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+}
+
+
+
